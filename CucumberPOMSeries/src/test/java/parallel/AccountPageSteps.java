@@ -33,7 +33,7 @@ public class AccountPageSteps {
 	@Given("user is on Accounts page")
 	public void user_is_on_accounts_page() {
 	   String actualAccountsTitle = accountsPage.getAccountsPageTitle();
-	   System.out.println("Accounts page title is "+actualAccountsTitle);
+	   System.out.println("Accounts page titles is "+actualAccountsTitle);
 	   Assert.assertTrue(expectedAccountsTitle.equalsIgnoreCase(actualAccountsTitle) );
 	}
 

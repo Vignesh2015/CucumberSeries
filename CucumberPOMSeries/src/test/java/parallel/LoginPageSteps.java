@@ -23,7 +23,7 @@ public class LoginPageSteps {
 	public void user_gets_the_title_of_the_page() {
 		
 		title = loginPage.getPageTitle();
-		System.out.println("Login page title is " + title);
+		System.out.println("Login page titles is " + title);
 	}
 
 	@Then("page title should be {string}")
