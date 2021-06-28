@@ -25,6 +25,8 @@ public class AccountPageSteps {
 		List<Map<String, String>> credList = credTable.asMaps();
 		String userName = credList.get(0).get("username");
 		String password = credList.get(0).get("password");
+		System.out.println("Username is "+userName);
+		
 		
 		DriverFactory.getDriver().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 		accountsPage = loginPage.doLogin(userName, password);
@@ -34,7 +36,7 @@ public class AccountPageSteps {
 	public void user_is_on_accounts_page() {
 	   String actualAccountsTitle = accountsPage.getAccountsPageTitle();
 	   System.out.println("Accounts page titles is "+actualAccountsTitle);
-	   Assert.assertTrue(expectedAccountsTitle.equalsIgnoreCase(actualAccountsTitle) );
+	   Assert.assertTrue(expectedAccountsTitle.equalsIgnoreCase(actualAccountsTitle));
 	}
 
 	@Then("user gets accounts section")
